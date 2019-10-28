@@ -1,0 +1,24 @@
+# using this extension on vscode
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+@baseUrl = http://localhost:3333/user
+
+### GET ALL
+# @name users
+GET {{baseUrl}}
+
+### GET BY FIRST USER ID
+
+@firstUserId = {{users.response.body.data[0].id}}
+
+GET {{baseUrl}}/{{firstUserId}}
+
+### POST
+
+POST {{baseUrl}}/novo
+Content-Type: application/json
+
+{
+  "name": "Tarantini"
+}
