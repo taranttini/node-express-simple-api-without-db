@@ -4,21 +4,18 @@
 
 @baseUrl = http://localhost:3333/user
 
-### GET ALL
+### 1st GET ALL
 # @name users
 GET {{baseUrl}}
 
-### GET BY FIRST USER ID
-
+### 2nd GET BY FIRST USER ID
 @firstUserId = {{users.response.body.data[0].id}}
-
 GET {{baseUrl}}/{{firstUserId}}
 
-### POST
-
-POST {{baseUrl}}/novo
+### 3rd POST
+POST {{baseUrl}}/new
 Content-Type: application/json
 
 {
-  "name": "Tarantini"
+  "name": "Tarantini2"
 }
