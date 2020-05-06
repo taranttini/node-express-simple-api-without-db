@@ -16,6 +16,3 @@ class Guid {
 }
 
 module.exports = Guid;
-
-
-//module.exports = uuidv4;
